@@ -3,25 +3,25 @@ layout: nil
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
- 
- <title>Polyglotted Org</title>
- <link href="http://www.polyglotted.org/atom.xml" rel="self"/>
- <link href="http://www.polyglotted.org/"/>
+
+ <title>Polyglotted IO</title>
+ <link href="http://polyglotted.io/atom.xml" rel="self"/>
+ <link href="http://polyglotted.io/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://www.polyglotted.org/</id>
+ <id>http://polyglotted.io/</id>
  <author>
    <name>Shankar Vasudevan</name>
-   <email>shankar@polyglotted.org</email>
+   <email>shankar@polyglotted.io</email>
  </author>
 
  {% for post in site.posts %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://www.polyglotted.org{{ post.url }}"/>
+   <link href="http://polyglotted.io{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://www.polyglotted.org{{ post.id }}</id>
+   <id>http://polyglotted.io{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
- 
+
 </feed>
